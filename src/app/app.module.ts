@@ -5,20 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
-import { FollowersComponent } from './followers/followers.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component'
+import { UserService } from './user.service';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContentComponent,
-    FollowersComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { AboutComponent } from './about/about.component'
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

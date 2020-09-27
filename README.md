@@ -1,27 +1,23 @@
 # JavaBrainsWrapUp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+The purpose of this project was to test basic functionality of angular 10 concepts learnt through the java brains course in 
+https://www.youtube.com/watch?v=9RG3MiEBEIw&list=PLqq-6Pq4lTTb7JGBTogaJ8bm7f8VCvFkj.
 
-## Development server
+Application functionality: It lets you enter the github usernames, fetches and parses the code to display basic details.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Application design: 
+* 2 components home and about besides app component. 
+* Basic url routing for the 2 components is done. 
+* The home component further utilizes more component header and content. 
+* Header component has the input bar for getting username and a submit button.
+* The header component makes get call to fetch data for username from github api and uses eventEmitter to send response from home(child component) to home(parent component).
+* Home component calls upon a service called user.service to parse the response into a custom model called user.model.
+* This model is passed to content component(child component) from home component(parent component).
+* The component displays this model data.
+* About component is just a basic component.
 
-## Code scaffolding
+To-do:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Push some specs (yet to explore that).
+* Add child routing.
+* Actually the app component should contain only the router outlet rather than have the HOME and ABOUT router links. Because the error component for invalid url would load below the HOME and ABOUT. Wrong UX.

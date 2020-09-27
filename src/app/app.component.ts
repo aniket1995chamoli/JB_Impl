@@ -9,4 +9,8 @@ import { user } from './userModel/user.model';
 })
 export class AppComponent {
   title = 'javaBrainsWrapUp';
+  urlMappings = [
+    {linkName: 'HOME', url: 'home'},
+    {linkName: 'ABOUT', url: 'about'}
+  ]
 }

@@ -1,2 +1,2 @@
-<a routerLink="home">Home</a> <a routerLink="about">About</a>
+<a *ngFor="let urlMapping of urlMappings" [routerLink]="urlMapping.url">{{urlMapping.linkName}}</a>
 <router-outlet></router-outlet>
