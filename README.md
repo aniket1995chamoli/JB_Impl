@@ -21,3 +21,4 @@ To-do:
 * Push some specs (yet to explore that).
 * Add child routing.
 * Actually the app component should contain only the router outlet rather than have the HOME and ABOUT router links. Because the error component for invalid url would load below the HOME and ABOUT. Wrong UX.
+* Add css.
